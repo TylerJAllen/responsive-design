@@ -4,26 +4,17 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 html, body {
   font-family: 'Roboto', sans-serif;
   background-color: white;
 }
-
 .container {
- padding: 4vh 2vw;
+ padding: 2vh 2vw;
 }
-
 .section {
-background-repeat: no-repeat;
-background-size: cover;
-background-position: 50%;
 margin: 2vh;
-height: 22vmax;
 border: 1px solid black;
 }
-
-/*outter sections*/
 .section:nth-of-type(5n+1) {
   height: 50vh;
 }
@@ -45,15 +36,20 @@ border: 1px solid black;
 .section:last-of-type {
   background-image: url("../images/outter2.jpg");
 }
+.section, .inner-section > .inner-section-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+}
 .inner-section {
   display: flex;
 }
-
 .inner-section > .inner-section-image {
   flex: 33%;
   background-position: 50%;
   background-size: cover;
-  height: 55%;
+  width: 100%;
+  height: 10vmax;
   margin: 10px;
   position: relative;
   border: 1px solid black;
@@ -62,12 +58,48 @@ border: 1px solid black;
   flex: 66%;
   width: 100%;
   line-height: 1.4;
-  font-size: 18px;
+  font-size: 16px;
   padding: 10px 15px 10px 5px;
   border: 1px solid black;
 }
 .inner-section > .inner-section-text > h4 {
   font-weight: normal;
 }
-
+.inner-section > .inner-section-text > .text-area {
+  margin-bottom: 10px;
+}
+.inner-section > .inner-section-text > footer {
+  font-size: 10px;
+}
 /*media queries*/
+@media screen and (min-width: 600px) {
+  .section, .section:nth-of-type(5n+1) {
+    margin: 2.5%;
+  }
+  .section:nth-of-type(5n+1) {
+    height: 30vh;
+  }
+  .inner-section {
+   flex-direction: column;
+   width: 44.5%;
+   display: inline-grid;
+  }
+  .inner-section > .inner-section-image, .inner-section > .inner-section-text {
+    width: auto;
+  }
+  .inner-section > .inner-section-image {
+    height: 15vmax;
+    margin: 0;
+  }
+  .inner-section > .inner-section-text {
+    padding: 15px;
+    height: auto;
+    text-align: center;
+  }
+  .inner-section > .inner-section-text > .text-area {
+    min-height: 90px;
+  }
+}
+/*@media screen and (min-width: 1000px) {
+
+}*/
