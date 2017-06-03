@@ -129,11 +129,11 @@ background-color: white;
   #title, .section, .section:nth-of-type(5n+1) {
     margin: 1.5%;
   }
-  @media screen and (min-width: 1400px) {
-    .container {
+}
+@media screen and (min-width: 1400px) {
+  .container {
     max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
-    }
   }
 }
